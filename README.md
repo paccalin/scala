@@ -11,6 +11,7 @@ Le but de ce TD est d'implémenter quelque methodes
 * Télécharger le [**ZIP**](https://github.com/poussard/scala-TD2/archive/master.zip)
 * Décompresser le
 * Importer le comme 'existing Project' dans eclipse ( File --> import --> General --> existing projects into workspace)
+* Pour lancer les tests unitaire du projet, cliquer droit sur le fichier de tests  ' ( Run As --> Scala Junit Test)
 
 ## Liste des fichiers
 
