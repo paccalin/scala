@@ -28,7 +28,7 @@ Le but de ce TD est d'implémenter quelque methodes
     
 ## Exercise
 * Dissection des listes
-    * Exécutez ses différentes instructions, et regardez les différents types retournez
+    * Exécutez ses différentes instructions, et regardez les différents types retourne
 	```scala
 	val list = List(1,2,3)
 	list.tail
