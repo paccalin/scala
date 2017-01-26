@@ -37,14 +37,14 @@ object Lists {
    * @throws  java.util.IllegalArgumentException si `myList` est une liste vide
    */
   def max(myList: List[Long]): Long = ???
-  
+
   /**
    * Ecrire une methode qui renverse une liste.
    * @param   myList une liste de nombres
    * @return  liste avec l'ordre des elements inverses
    */
   def revert(myList: List[Long]): List[Long] = ???
-  
+
   /**
    * Ecrire une methode qui renvoie la fusion de 2 listes de nombres sans redondance.
    * @param   listA une liste de nombres
@@ -52,5 +52,14 @@ object Lists {
    * @return  funsion des 2 listes
    */
   def merge(listA: List[Long], listB: List[Long]): List[Long] = ???
+
+  /**
+   * Ecrire une methode qui aplatit une liste. List(1, List(2, 3), 4) donnera List(1, 2, 3, 4 )
+   * Any est le type parent de tout les types et tout les objets
+   *
+   * @param   list une liste de liste
+   * @return  la liste aplatit
+   */
+  def aplatir(list: List[Any]): List[Any] = ???
 
 }

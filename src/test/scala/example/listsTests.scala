@@ -124,7 +124,7 @@ class lists extends FunSuite {
   }
 
   // Merge Function
-  test("merge 2 empty lists") {
+  test("merge 2 lists") {
     assert(merge(List(1, 2, 3), List(4, 5, 6)).sorted === List(1, 2, 3, 4, 5, 6))
   }
 
@@ -147,4 +147,14 @@ class lists extends FunSuite {
   test("merge same lists") {
     assert(merge(List(1, 2, 0), List(1, 2, 0)).sorted === List(0, 1, 2))
   }
+
+  test("merge 2 empty lists") {
+    assert(merge(List(), List()).sorted === List())
+  }
+
+  // Flatten Function
+  test("flatten 2 lists") {
+    assert(aplatir(List(1, List(2, 3, 4), 5, 6, List(7, 8, 9, List(10, 11, 12)))) === List(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12))
+  }
+
 }
