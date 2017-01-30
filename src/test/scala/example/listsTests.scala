@@ -81,7 +81,7 @@ class lists extends FunSuite {
    * Now we finally write some tests for the list functions that have to be implemented for this assignment. We fist import all members
    * of the `List` object.
    */
-  import Lists._
+  import listsFun._
 
   /**
    * We only provide two very basic tests for you. Write more tests to make sure your `sum` and `max` methods work as expected.
