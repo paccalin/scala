@@ -2,7 +2,7 @@ package example
 
 import common._
 
-object Lists {
+object listsFun {
   /**
    * Ecrire une methode qui permet de calculer la somme de tous les elements de la liste `myList`.
    * il y a plusieurs techniques qui peuvent etre utilisees  pour mettre en oeuvre cette methode
