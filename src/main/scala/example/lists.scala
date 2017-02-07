@@ -61,8 +61,8 @@ object listsFun {
    * @return  liste avec l'ordre des elements inverses
    */
   def revert(myList: List[Long]): List[Long] = myList match {
-    case last :: init => List(last) :: revert(List(init))
     case Nil => Nil
+    case _ => myList.last :: revert(myList.init)
   }
 
   /**
