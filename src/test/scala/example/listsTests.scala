@@ -35,8 +35,8 @@ class lists extends FunSuite {
    *
    * This allows tests to be written in a more readable manner:
    */
-  test("one plus one is three?") {
-    assert(1 + 1 == 3) //TODO  This assertion fails! Go ahead and fix it.
+  test("one plus two is three?") {
+    assert(1 + 2 == 3)
   }
 
   /**
@@ -58,7 +58,7 @@ class lists extends FunSuite {
    * We recommend to always use the `===` equality operator when writing tests.
    */
   test("details why one plus one is not three") {
-    assert(1 + 1 === 3) //TODO FIX ME
+    assert(1 + 1 !== 3)
   }
 
   /**
@@ -107,11 +107,21 @@ class lists extends FunSuite {
 
   // Max function
   test("max of a few numbers") {
-    assert(false) //TODO FIX ME
+    assert(max(List(1, 2, -3)) === 2)
+  }
+    // Max function
+  test("max of a few numbers 1") {
+    assert(max(List(56, 2, -3)) === 56)
+  }
+    // Max function
+  test("max of a few numbers 2") {
+    assert(max(List(-1, -2, -3)) === -1)
   }
 
   test("max throws an exception if the list is empty") {
-    assert(false) //TODO FIX ME
+    intercept[IllegalArgumentException] {
+      max(List())
+    }
   }
 
   // Revert function

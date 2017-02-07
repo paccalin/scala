@@ -22,7 +22,12 @@ object listsFun {
    * @param   myList une liste de nombres
    * @return  la somme de tous les éléments de la liste `myList`
    */
-  def sum(myList: List[Long]): Long = ???
+  def sum(myList: List[Long]): Long = {
+    myList match {
+      case firstElem :: tail => firstElem + sum(tail) // if there is an element, add it to the sum of the tail
+      case Nil => 0 // if there are no elements, then the sum is 0
+    }
+  }
 
   /**
    * Ecrire une methode qui renvoie le plus grand element contenu dans une liste de nombres.
@@ -36,14 +41,29 @@ object listsFun {
    * @return  le plus grand element de la liste `myList`
    * @throws  java.util.IllegalArgumentException si `myList` est une liste vide
    */
-  def max(myList: List[Long]): Long = ???
+  def max(myList: List[Long]): Long = {
+    if (myList.isEmpty) throw new IllegalArgumentException
+
+    if (myList.length == 1)
+      myList.head
+    else
+      max(myList.head, max(myList.tail))
+  }
+
+  def max(curValue: Long, curMax: Long): Long = {
+    if (curValue > curMax) curValue
+    else curMax
+  }
 
   /**
    * Ecrire une methode qui renverse une liste.
    * @param   myList une liste de nombres
    * @return  liste avec l'ordre des elements inverses
    */
-  def revert(myList: List[Long]): List[Long] = ???
+  def revert(myList: List[Long]): List[Long] = myList match {
+    case last :: init => List(last) :: revert(List(init))
+    case Nil => Nil
+  }
 
   /**
    * Ecrire une methode qui renvoie la fusion de 2 listes de nombres sans redondance.
@@ -51,7 +71,10 @@ object listsFun {
    * @param   listB une liste de nombres
    * @return  funsion des 2 listes
    */
-  def merge(listA: List[Long], listB: List[Long]): List[Long] = ???
+  def merge(listA: List[Long], listB: List[Long]): List[Long] = {
+    val result = listA ++ listB
+    result.distinct
+  }
 
   /**
    * Ecrire une methode qui aplatit une liste. List(1, List(2, 3), 4) donnera List(1, 2, 3, 4 )
@@ -60,6 +83,9 @@ object listsFun {
    * @param   list une liste de liste
    * @return  la liste aplatit
    */
-  def aplatir(list: List[Any]): List[Any] = ???
-
+  def aplatir(list: List[Any]): List[Any] = list match {
+    case Nil => Nil
+    case (elem: List[Any]) :: tail => aplatir(elem) ::: aplatir(tail)
+    case (elem: Any) :: tail => elem :: aplatir(tail)
+  }
 }
