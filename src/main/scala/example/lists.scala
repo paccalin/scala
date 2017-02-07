@@ -72,8 +72,8 @@ object listsFun {
    * @return  funsion des 2 listes
    */
   def merge(listA: List[Long], listB: List[Long]): List[Long] = {
-    val result = listA ++ listB
-    result.distinct
+      if(listB.isEmpty) listA
+      else (merge(listA, listB.tail) :+ listB.head).distinct
   }
 
   /**
